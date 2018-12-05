@@ -1,0 +1,57 @@
+@charset "utf-8";
+body, h1, h2, ul, dl, dt, dd{margin:0; padding:0;}
+body{background-color: #0a222b; text-align:center;}
+li{list-style: none;}
+::selection{background-color:deepskyblue; color:#fff;}
+
+.wrap{padding:0 20px; max-width: 960px; margin:0 auto;}
+
+.cover{background: url(../images/cover.png) bottom; color:aliceblue;
+padding-top:20%; padding-bottom:10%; background-size:cover;
+transition:padding .5s; /*반응형 분기점에서 부자연스러운 움직임을 부드럽게 만드는 애니메이션*/
+}
+
+.cover-title{font-size:15vw; font-family: 'Parisienne', cursive;
+    font-weight:normal; line-height:1;/* 폰트 사이즈와 같은 line-height값을 갖는다 */
+    transition: font-size .5s; /* 반응형 분기점 부드러운 애니메이션 */
+}
+.cover-title span{font-size:0.2em; /* 15vw/0.3 = 5vw */
+    font-family:'Merienda'; font-style:italic; display:block;
+    text-indent:4em;}
+
+/* 타임라인 시작 */
+.timeline{position: relative; padding-bottom: 50px;}
+.timeline:after{content:''; background-color:rgba(0,0,0,0.2); position:absolute;
+    top:4vw; bottom:0; margin-left:-3px; left:50%; width:6px; border-radius:5px; z-index:-1;}
+.timeline-list{margin-top:80px;}
+.itemBox{background: rgba(0,0,0,0.5); color:#ddd; padding:0 20px 20px 20px;
+    border-radius:20px;}
+.poster{width:150px; height:auto; vertical-align:top;/* 이미지 초기화하는 기본방법 */
+    margin: -60px 30px 0;/* 공간이 비어있는 곳을 차지하지 않게 하기위해 네거티브 마진 사용 (position X) */
+    }
+.movie-title{font-size:8vw; font-family:'impact'; line-height:1; color:lightskyblue;
+margin:20px; transition: font-size .5s;}/* .defition과 그 부모요소인 .itemBox의 마진겹침현상 */
+.definition{margin:20px;}
+.definition dt{font-size:25px; color:#ddd; margin-bottom:20px;}
+.definition dt span{font-size:0.6em;}
+
+@media (min-width:720px){
+    .cover{padding-top:10%; padding-bottom:5%;}
+    .cover-title{font-size:15vw;}
+    .timeline{padding-bottom:250px;}
+    .timeline:after{background-color:skyblue;}
+    .timeline-list{width:50%; padding:0 20px; box-sizing: border-box;
+    /* 너비가 %이므로 패딩이 음수가 됨>보더박스 */ text-align:right;}
+    .timeline-list:nth-child(even){
+        margin-left: auto;/* 짝수 요소의 왼쪽 공간 알아서 */
+        margin-top:-150px; margin-bottom:-200px;
+        text-align: left;
+    }
+    /* .itemBox{position: relative;} */
+    .timeline-list:nth-child(odd) .poster{float:left;}
+    .timeline-list:nth-child(even) .poster{float:right;}
+    .movie-title{font-size:4vw; clear:both; padding-top:20px;}
+}
+@media (min-width:1440px){
+    .movie-title{font-size:3vw;}
+}
