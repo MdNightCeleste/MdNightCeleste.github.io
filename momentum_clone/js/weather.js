@@ -32,7 +32,7 @@ function handleGeoSuccess(position){
 
 
 function handleGeoError(){
-    console.log("Can't access geo location");
+    M_weather.innerText = "Can't access geo location";
 }
 
 function askForCoords(){
