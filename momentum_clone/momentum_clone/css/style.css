@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* common style */
+*{margin:0; padding:0;}
+body{background-color: powderblue; color:#fff; text-align: center; font-size:1em;}
+::selection {background:deepskyblue; color: #fff;} /*드래그 블록 색상 변경*/
+
+.js_nameForm, .js_greetings{display:none;}
+.showing{display:block;}
+
+h1, h4{margin:0; transition: all .5s ease-in-out;}
+h1{margin-top:30vh; font-size:10vw;}
+h4.js_greetings{font-size:4vw; margin-top:2vh;}
+ul.js_toDoList{margin-top:2.5vh;}
+li{list-style:none; margin:0 auto; padding:0 0 .5vh; font-size:1.4rem; font-weight:600; cursor: pointer;}
+
+input{margin-top:3vh; width:30vw; height:4vh;  background: none; border:0; border-bottom:3px solid #fff;
+    outline:0; color:#fff; font-weight:600; text-align: center; transition: width .5s ease-in-out;}
+input::placeholder{
+    color:#fff; text-align:center; font-size:3.5vw; font-weight:600;}
+.js_weather{position:absolute; top:2%; right:2%; transition: font-size .5s ease-in-out;}
+
+@keyframes fadeIn{
+    from {opacity:0;} to {opacity:1;}
+}
+
+.bgImg{position: absolute; top:0; left:0; width:100%; height:100%; z-index:-1;
+    animation: fadeIn .5s linear;}
+
+@media only screen and (min-width:480px){
+    h1{font-size: 4rem; margin-top:35vh}
+    h4.js_greetings{font-size: 3.3vw; margin-top:2vh;}
+    .js_weather{font-size:1.3rem;}
+    input{width:35vw; height:4vh}
+    input::placeholder{font-size:3.3vw;}
+}
+@media only screen and (min-width:960px){
+    h1{font-size: 7rem; margin-top:40vh}
+    h4.js_greetings{font-size:2.3vw; margin-top:4vh;}
+    .js_weather{font-size:1.3rem;}
+    input{width:30vw; height:5vh;}
+    input::placeholder{font-size:2.3vw;}
+}
+@media only screen and (min-width:1440px){
+    h1{font-size: 8rem; margin-top:40vh;}
+    h4.js_greetings{font-size:1.8vw; margin-top:3.5vh;}
+    .js_weather{font-size:1.8rem;}
+    input{width:25vw; height:5vh;}
+    input::placeholder{font-size:1.8vw; height:5vh;}
+}
