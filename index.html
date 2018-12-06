@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>원졍's PORTFOLIO</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <nav id="nav">
+        <h1>WEB'S</h1>
+        <div class="mNav">
+            <div class="icon-wrap">
+                <div class="icon"></div>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li class="active"><a href="#section1">menu1</a></li>
+            <li><a href="#section2">menu2</a></li>
+            <li><a href="#section3">menu3</a></li>
+            <li><a href="#section4">menu4</a></li>
+            <li><a href="#section5">menu5</a></li>
+            <li><a href="#section6">menu6</a></li>
+        </ul>   
+    </nav>
+    <div id="contents">
+        <div id="section1"><h2>Time is <strong>gold</strong></h2></div>
+        <div id="section2"><h2>Seeing is <strong>believing</strong></h2></div>
+        <div id="section3"><h2>Asking costs <strong>nothing</strong></h2></div>
+        <div id="section4"><h2><strong>Better</strong> is to bow than break</h2></div>
+        <div id="section5"><h2><strong>Habit</strong> is second nature</h2></div>
+        <div id="section6"><h2>Pain past is <strong>pleasure</strong></h2></div>
+    </div>
+    <script>
+        var nav = $("nav ul li");
+        var cont = $("#contents > div");
+
+        nav.click(function(event){
+            event.preventDefault();
+
+            var tg = $(this);
+            var index = tg.index();
+            var section = cont.eq(index);// 클릭한 nav li와 섹션을 연결
+            var offset = section.offset().top;// 각 컨텐츠의 오프셋(가장자리)값 할당
+
+            $("html, body").animate({scrollTop: offset}, 1000,"easeInOutExpo");
+        }); // nav 클릭시 해당섹션으로 이동
+
+        $(window).scroll(function(){
+            var winScroll = $(this).scrollTop();
+
+            if(winScroll >= cont.eq(0).offset().top){
+                nav.removeClass("active");
+                nav.eq(0).addClass("active");
+            }
+            if(winScroll >= cont.eq(1).offset().top){
+                nav.removeClass("active");
+                nav.eq(1).addClass("active");
+            }
+            if(winScroll >= cont.eq(2).offset().top){
+                nav.removeClass("active");
+                nav.eq(2).addClass("active");
+            }
+            if(winScroll >= cont.eq(3).offset().top){
+                nav.removeClass("active");
+                nav.eq(3).addClass("active");
+            }
+            if(winScroll >= cont.eq(4).offset().top){
+                nav.removeClass("active");
+                nav.eq(4).addClass("active");
+            }
+            if(winScroll >= cont.eq(5).offset().top){
+                nav.removeClass("active");
+                nav.eq(5).addClass("active");
+            }
+        }); // nav 클릭시 active 클래스 활성
+
+        $(".mNav").click(function(){
+            $(".menu").slideToggle();
+            // toggle=show()-hide() etc> slideDown()-slideUp() fadeIn()-fadeOut()
+        });
+
+        $(window).resize(function(){
+            var wWidth = $(this).width();
+            if(wWidth > 800 && $(".menu").is(":hidden")){ //.menu가 숨겨진 상태이고 800이상일때
+                $(".menu").removeAttr("style");
+            }
+        });//브라우저의 사이즈를 조정했을때 .menu style display:none을 해결
+    </script>
+</body>
+</html>
