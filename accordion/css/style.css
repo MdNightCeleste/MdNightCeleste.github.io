@@ -1,0 +1,69 @@
+@charset "utf-8";
+@keyframes scroll{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 200px 200px;
+    }
+}
+html{height:100%;} /* 상하좌우 가운데 정렬 */
+body, ul, h2{margin:0; padding:0;}
+li{list-style:none;}
+
+body{min-height:100%; display:flex; justify-content: center; align-items: center;
+    background:#222; color:white;}
+
+.wrap{width:960px; margin:200px auto;}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){
+    /* IE 10 - IE 11 */
+    .wrap{margin:200px 0 !important;}
+    /* - 18.12.04 - IE에서는 justify-content(a lot of bugs) / content:''; 사용X */
+}
+.clearfix:after{content:''; display:block; clear:both;}
+/* 플로트로 없어진 ul 높이값을 클리어 해줄때 overflow:hidden 대신 사용 */
+
+.character{background-color:#bee8a7; transform: skewY(-3deg);}
+.character-item{
+    float:left; width:33.3333333%; height:380px; position: relative;
+    line-height:380px; transition: all .5s; animation: scroll 2s infinite;
+    animation-timing-function: linear; animation-play-state: paused;
+}
+.character-item h2{
+    padding:0 1.3em; transition:all .5s; font-size:0; opacity: 0;
+    font-family: 'Nanum Pen Script', cursive;}
+
+/* 칸 크기 hover */
+.character:hover .character-item{width:25%;}
+.character .character-item:hover{width:50%; animation-play-state: running;}
+.character .character-item:hover h2{opacity: 1; font-size: 3.5rem;}
+
+.character-img{position: absolute; left:50%; top:50%;
+    transition:transform .5s; transition-timing-function: cubic-bezier(0.43, 1.5, 0.49, 1.59);
+    transform: translate(-50%,-50%) rotate(0) scale(0.9);}
+
+.character-item.lion {
+    background-color:powderblue;
+    text-align:right;
+    background-image:url(../images/lion-bg.png);
+    /* background-color:mistyrose; */
+}
+.character-item.apeach {
+    background-color:lightgoldenrodyellow;
+    text-align:right;
+    background-image:url(../images/apeach-bg.png);
+}
+.character-item.muzi {
+    background-image:url(../images/muzi-bg.png);
+}
+/* 이미지 크기 hover */
+.character-item.lion:hover .character-img{
+    transform: translate(-70%,-50%) rotate(-10deg) scale(1.3);
+}
+.character-item.apeach:hover .character-img{
+    transform: translate(-70%,-50%) rotate(10deg) scale(1.3);
+}
+.character-item.muzi:hover .character-img{
+    transform: translate(-30%,-60%) rotate(10deg) scale(1.3);
+}
