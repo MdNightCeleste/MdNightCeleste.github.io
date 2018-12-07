@@ -2,23 +2,41 @@
 
 /* -----Common style reset */
 *{margin:0; padding:0;}
-body{font-family: 'Lato', 'Nanum Gothic', cursive;}
+body{font-family:'Lato', 'Abel', cursive;}
 li{list-style:none;}
 img{border:0; background:none;}
 a{text-decoration: none; color:inherit;}
+a:active, a:hover, button{outline:0;}
 
 /* -----Individual style */
-
 /* nav */
 #nav {position: fixed; left: 0; top: 0; width: 100%; background-color: rgba(255,255,255,0.3);}
-#nav h1 {float: left; color: #fff; font-size: 40px; padding: 5px 5px 5px 15px; font-family: 'Abel' }
+#nav h1 {float: left; color: #fff; font-size: 40px; padding: 5px 5px 5px 15px;
+    font-family: 'Abel'; background: linear-gradient(to right, #33001b, #ff0084);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    /* 텍스트 그라디언트 */}
+
 #nav ul {float: right; padding-right: 10px; }
 #nav ul li {display: inline; cursor: pointer;}
 #nav ul li a {display: inline-block; padding: 20px 15px; color: #fff;
     font-weight: bold; font-family: 'Abel'; text-transform: capitalize;}
-#nav ul li.active a{color:#222;}
+#nav ul li.active a{color:#fff; background:linear-gradient(to left, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 #nav .mNav {display: none; position: absolute; top: 7px; right: 10px;
     width: 65px; height: 45px; cursor: pointer;}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    /* IE10+ CSS styles */
+    #nav h1 {
+        color: #330867;
+        background: transparent;
+    }
+    #nav ul li.active a{
+        color: #222222;
+        background: transparent;
+    }
+}
 
 /* icon-menu */
 .icon-wrap {padding-left: 10px;}
@@ -32,7 +50,7 @@ a{text-decoration: none; color:inherit;}
 /* contents */
 #contents {text-align: center; color: #fff;}
 #contents > div {height: 100vh; line-height: 100vh;}
-#contents > div h2 {font-size: 90px; font-weight: 100; text-transform: uppercase;
+#contents > div h2 {font-size: 5vw; font-weight: 100; text-transform: uppercase;
     transition: font-size .3s;}
 #contents > div h2 strong {font-weight: 700; font-style: italic;}
 
@@ -44,6 +62,9 @@ a{text-decoration: none; color:inherit;}
 #section5 {background:radial-gradient(ellipse farthest-corner at center bottom, #69d2fb 0%, #20438E 100%);}
 #section6 {background:radial-gradient(ellipse farthest-corner at center top, #6CEBCF 0%, #38a7aa 100%);}
 
+@media (max-width:960px){
+
+}
 @media (max-width:800px){
     #nav .menu{display:none; float:none; text-align:center; padding-right:0;}
     #nav .mNav{display:block;}
@@ -54,3 +75,31 @@ a{text-decoration: none; color:inherit;}
 
     #contents > div h2{font-size:6vw; font-weight:300;}
 }
+@media (max-width:600px){
+
+}
+/* #section6 */
+#section6{padding-top:45vh;}
+#contactBox{width:360px; height:120px; margin:0 auto;}
+.clearfix:after{content:''; display:block; clear:both;}
+.btn{float:left; width:100px; height:100px; margin:10px;
+    border:0; transition:all .5s; display:block;
+    background-size: 200% auto; border-radius:50%; box-shadow: 5px 8px 5px rgba(0,0,0,0.2);}
+.btn a{text-align: center; color:#fff;  font-size:20pt;
+    font-family: 'Nanum Pen Script', cursive; display:block;
+    width:100px; height:100px; line-height:100px; border-radius:50%;
+}
+.btn:hover{background-position: right center; margin-top:-10px;}
+
+.tel{
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+}
+.mail{
+    background-image: linear-gradient(to right, #83a4d4 0%, #b6fbff 51%, #83a4d4 100%);
+}
+.mail a .span_mail{display:none;}
+
+.kakao{
+    background-image: linear-gradient(to right, #ffb347 0%, #ffcc33 51%, #ffb347 100%);
+}
+.kakao:hover{border-radius:20%;}

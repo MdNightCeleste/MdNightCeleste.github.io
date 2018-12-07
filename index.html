@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <title>원졍's PORTFOLIO</title>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <!-- 자동으로 전화번호를 감지하여 클릭투콜을 활성화하는것을 막아줌 -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Abel|Nanum+Pen+Script" rel="stylesheet">
+    <!-- 폰트 어썸 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <nav id="nav">
-        <h1>WEB'S</h1>
+        <h1>MDnight Celeste</h1>
         <div class="mNav">
             <div class="icon-wrap">
                 <div class="icon"></div>
@@ -22,21 +25,64 @@
         </div>
 
         <ul class="menu">
-            <li class="active"><a href="#section1">menu1</a></li>
-            <li><a href="#section2">menu2</a></li>
-            <li><a href="#section3">menu3</a></li>
-            <li><a href="#section4">menu4</a></li>
-            <li><a href="#section5">menu5</a></li>
-            <li><a href="#section6">menu6</a></li>
+            <li class="active"><a href="#section1">INTRO</a></li>
+            <li><a href="#section2">ABOUT</a></li>
+            <li><a href="#section3">SKILL</a></li>
+            <li><a href="#section4">WEBSITE</a></li>
+            <li><a href="#section5">ARTWORK</a></li>
+            <li><a href="#section6">CONTACT</a></li>
         </ul>   
     </nav>
     <div id="contents">
-        <div id="section1"><h2>Time is <strong>gold</strong></h2></div>
-        <div id="section2"><h2>Seeing is <strong>believing</strong></h2></div>
-        <div id="section3"><h2>Asking costs <strong>nothing</strong></h2></div>
-        <div id="section4"><h2><strong>Better</strong> is to bow than break</h2></div>
-        <div id="section5"><h2><strong>Habit</strong> is second nature</h2></div>
-        <div id="section6"><h2>Pain past is <strong>pleasure</strong></h2></div>
+        <div id="section1">
+            <h2>Time is <strong>gold</strong></h2>
+        </div>
+        <div id="section2">
+            <h2>Seeing is <strong>believing</strong></h2>
+        </div>
+        <div id="section3">
+            <h2>Asking costs <strong>nothing</strong></h2>
+        </div>
+        <div id="section4">
+            <h2><strong>Better</strong> is to bow than break</h2>
+        </div>
+        <div id="section5">
+            <h2><strong>Habit</strong> is second nature</h2>
+        </div>
+        <div id="section6">
+            <div id="contactBox" class="clearfix">
+                <button class="btn tel">
+                    <a href="tel://01082318022">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </button>
+                <button class="btn mail">
+                    <a href="mailto:MDnightCeleste@gmail.com?subject=포트폴리오 메일문의">
+                        <span class="span_mail">E-mail</span>
+                        <span class="mail_icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </a>
+                    <script>
+                        var mail = $(".mail a");
+                        var spanMail = $(".mail a .span_mail")
+                        var mailIcon = $(".mail a .mail_icon")
+                        
+                        mail.mouseover(function(){
+                            spanMail.css("display","block");
+                            mailIcon.css("display","none");
+                        });
+                        mail.mouseleave(function(){
+                            spanMail.css("display","none");
+                            mailIcon.css("display","block");
+                        })
+                    </script>
+                </button>
+                <button class="btn kakao">
+                    <a href="https://open.kakao.com/o/sbzJEG6" target="_blank">오픈 카톡</a>
+                </button>
+            </div>
+        </div>
     </div>
     <script>
         var nav = $("nav ul li");
