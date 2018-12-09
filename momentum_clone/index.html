@@ -12,7 +12,10 @@
 </head>
 <body>
     <script>
-        console.log("본 페이지는 크롬 브라우저에서 온전히 구현된 페이지입니다.")
+        var agent = navigator.userAgent.toLowerCase();
+        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)){
+            alert("본 페이지는 모던 자바스크립트를 사용하여, 크롬 브라우저에서 온전히 구현된 페이지입니다.");
+        }//IE11 or 10이하의 버전에서 나오는 경고창
     </script>
     <div class="js_clock">
         <h1>00:00</h1>
