@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>오케이크 > 메뉴</title>
+<!--    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/menu_style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/menu_slide.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+    <div id="headerBox">
+        <header>
+           <ul class="logSNS">
+               <li class="log"><a href="#">로그인</a></li>
+               <li class="sns"><a href="#"><i class="fab fa-instagram"></i></a></li>
+               <li class="sns"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+               <li class="sns"><a href="#"><i class="fab fa-twitter"></i></a></li>
+           </ul>
+           <ul class="infor">
+               <li class="inforHover"><a href="#">매장안내</a></li>
+               <li class="inforHover"><a href="#">고객센터</a></li>
+               <li class="franchise"><a href="#">가맹안내</a></li>
+           </ul>
+            <a href="#"><i class="fas fa-bars" id="cate"></i></a>
+            <div id="logoBox">
+               <fieldset id="globalSearch">
+                   <legend class="blind">전체검색</legend>
+                   <input type="text" id="search00" name="search" placeholder="티라미수">
+                   <button></button>
+               </fieldset>
+                <a href="index.html"><img src="images/logo.png" alt="로고"></a>
+            </div>
+        </header>
+        <nav>
+           <ul id="gnb">
+               <li><a href="#"><span class="gnbList">브랜드스토리</span></a>
+                   <ul class="sub">
+                       <li><a href="#">CEO이야기</a></li>
+                       <li><a href="#">B.I.소개</a></li>
+                   </ul>
+               </li>
+               <li><a href="#"><span class="gnbList">메뉴소개</span></a>
+                   <ul class="sub">
+                       <li><a href="#normalCakePage">일반케이크</a></li>
+                       <li><a href="#chocoCakePage">초코케이크</a></li>
+                       <li><a href="#macaronPage">마카롱</a></li>
+                   </ul>
+               </li>
+               <li><a href="#"><span class="gnbList">매장안내</span></a></li>
+               <li><a href="#"><span class="gnbList">커뮤니티</span></a>
+                   <ul class="sub">
+                       <li><a href="#">공지사항</a></li>
+                       <li><a href="#">이벤트</a></li>
+                       <li><a href="#">자유게시판</a></li>
+                   </ul>
+               </li>
+           </ul>
+        </nav>
+    </div>
+<section class="JMenuSection">
+    <ul id="intMenu">
+        <li class="normal"><a href="#normalCakePage">일반케이크</a></li>
+        <li class="choco"><a href="#chocoCakePage">초코케이크</a></li>
+        <li class="maca"><a href="#macaronPage">마카롱</a></li>
+    </ul>
+    <article id="normalCakePage">
+        <h1>일반케이크<span></span></h1>
+        <div id="slideBox">
+            <div id="menuSlide">
+                <div class="menuSlideDiv">
+                    <div class="JLine1">
+                        <a href="#"><span><img src="images/cake4.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake8.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake10.jpg" alt="일반빵케이크"></span></a>
+                    </div>
+                    <div class="JLine2">
+                        <a href="#"><span><img src="images/cake12.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake14.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake4.jpg" alt="일반빵케이크"></span></a>
+                    </div> 
+                </div> <!-- menuSlideDiv -->
+                <div class="menuSlideDiv">
+                    <div class="JLine1">
+                        <a href="#"><span><img src="images/cake12.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake14.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake4.jpg" alt="일반빵케이크"></span></a>
+                    </div>
+                    <div class="JLine2">
+                        <a href="#"><span><img src="images/cake10.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake8.jpg" alt="일반빵케이크"></span></a>
+                        <a href="#"><span><img src="images/cake12.jpg" alt="일반빵케이크"></span></a>
+                    </div> 
+                </div> <!-- menuSlideDiv -->
+            </div> <!-- menuSlide -->
+            <div id="arrow">
+            <i id="prev" class="fas fa-angle-left"></i>
+            <i id="next" class="fas fa-angle-right"></i>
+            </div>
+            <div id="bannerNav">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div> <!-- slideBox -->
+    </article>
+    <article id="chocoCakePage">
+        <h1>초코케이크<span></span></h1>
+        <div class="JLine1">
+            <a href="#"><span><img src="images/cake1.jpg" alt="초코빵케이크"></span></a>
+            <a href="#"><span><img src="images/cake2.jpg" alt="초코빵케이크"></span></a>
+            <a href="#"><span><img src="images/cake3.jpg" alt="초코빵케이크"></span></a>
+        </div>
+        <div class="JLine2">
+            <a href="#"><span><img src="images/cake5.jpg" alt="초코빵케이크"></span></a>
+            <a href="#"><span><img src="images/cake6.jpg" alt="초코빵케이크"></span></a>
+            <a href="#"><span><img src="images/cake9.jpg" alt="초코빵케이크"></span></a>
+        </div>
+    </article>
+    <article id="macaronPage">
+        <h1>마카롱<span></span></h1>
+        <div class="JLine1">
+            <a href="#"><span><img src="images/macaron1.png" alt="마카롱"></span></a>
+            <a href="#"><span><img src="images/macaron2.png" alt="마카롱"></span></a>
+            <a href="#"><span><img src="images/macaron4.png" alt="마카롱"></span></a>
+        </div>
+        <div class="JLine2">
+            <a href="#"><span><img src="images/macaron3.png" alt="마카롱"></span></a>
+            <a href="#"><span><img src="images/macaron5.png" alt="마카롱"></span></a>
+            <a href="#"><span><img src="images/macaron6.png" alt="마카롱"></span></a>
+        </div>
+    </article>
+</section>
+   <footer>
+        <div id="footBox">
+            <nav class="footNav">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">가맹점</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">윤리신고센터</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+            <address>경기도 안산시 단원구 꽃우물1길 22-9 1층(화정동 549번지)</address>
+            <p>TEL. 1522.7696 / FAX. 031.364.8789 / E-MAIL. h2_com@naver.com</p>
+            <p class="copy">Copyright 2018. O'cake all rights reserved</p>
+        </div>
+    </footer>
+    <div id="globalArrow">
+        <a href="#headerBox"><i class="fas fa-caret-up"></i></a>
+        <a href="#footBox"><i class="fas fa-caret-down"></i></a>
+    </div>
+</body>
+</html>

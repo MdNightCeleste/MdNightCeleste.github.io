@@ -1,0 +1,61 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+body{font:normal 12pt "MD아트체","Nanum Gothic","Gulim",serif; color:#7c6354; position:relative;}
+a{text-decoration:none; color:inherit;}
+ul, ol{list-style:none;}
+img{border:0; max-width:100%;}
+address{font-style:normal;}
+.blind{display:none;}
+
+/*------------------ 헤더 ------------------*/
+#box{width:1080px; margin:0 auto;}
+#headerBox{height:200px;}
+header{height:150px; width:1080px; margin:0 auto;}
+
+#cate{display:none;}
+
+/* 좌측 상단 로그인 sns 내비 */
+.logSNS{height:20px; display:inline-block; line-height:20px; padding:5px 0;}
+.logSNS li{margin-right: 10px; float:left;}
+.sns:hover{opacity:0.5;}
+.log{background:#c5a48a; color:#fff; width: 80px; text-align: center; border-radius:20px; font-size:0.93em;}
+.sns{font-size:16pt;}
+.sns:nth-of-type(2){color:orchid;}
+.sns:nth-of-type(3){color:darkblue;}
+.sns:nth-of-type(4){color:deepskyblue;}
+
+/* 우측 상단 내비*/
+.infor{width:21.76%; height:110px; float:right; text-align:center;}
+.infor li{float:left; width:/*78px*/33.2%; padding-top:55px; height:90px;}
+.infor li a{display:block; width:100%; height:30px; line-height: 30px;}
+.inforHover a:hover{opacity:0.5;}
+.franchise{background:url(../images/tag.png) no-repeat 0 0; background-size: contain; color:#fff !important; height:110px;}
+.franchise:hover{background:url(../images/tag2.png) no-repeat 0 0; background-size: contain;}
+
+#globalSearch{width:15%; position:absolute; top:80px; left:15%; border-radius:15px; border:3px solid #7c6354; padding:3px;}
+#globalSearch input{border:0; padding-left:4%; width:80%;}
+#globalSearch button{width:10%; height:20px; border:0; float:right; margin-right:3%; background:url(../images/search_btn.png) no-repeat 0 0; background-size:contain;}
+
+#logoBox{width:/*260px*/24.07%; margin:0 auto; padding-top:18px;}
+
+/* gnb */
+#headerBox nav{height:50px; background:#fbd8dd;}
+#gnb{width:/*720px*/66.66%; margin:0 auto; line-height:50px; display:flex; position:relative;}
+#gnb>li{width:/*180px*/25%; text-align:center;; font-size:1.4rem; font-weight: 600; letter-spacing:5px;}
+#gnb>li span{display:inline-block; width:100%; height:50px; box-sizing:border-box; }
+#gnb>li:hover span{background:#fff; color:#f4b5d0; border:2px solid #c5a48a;line-height: 46px;}
+.sub{position:absolute; top:50px; z-index:900; width:25%; font-size:1.2rem; background:rgba(250,250,250,0.7); box-sizing:border-box; border:1px solid #ccc; display:none;}
+.sub>li{height:45px;}
+.sub>li:hover{background:#c5a48a; color:#fff;}
+
+/*------------------ 푸터 ------------------*/
+/* 푸터 */
+footer{clear:both; width:100%; height:200px; background:#7c6354; color:#fff; margin-top:100px;}
+#footBox{width:1080px; margin:0 auto; text-align: center;}
+.footNav{width:700px; padding-top:50px;margin:0 auto;}
+.footNav li{float:left; margin-left:13px;}
+address{clear:both; padding-top:15px;}
+.copy{padding-top:15px;}
+
+/* 글로벌 애로우 */
+#globalArrow{position:fixed; z-index:900; font-size:3rem; width:30px; height:100px; color:#c5a48a; bottom:8%; right: 5%;}

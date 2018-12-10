@@ -1,0 +1,32 @@
+/* 섹션 */
+.JMenuSection{width:1080px; margin:0 auto; margin-top:70px;}
+#intMenu{width:40%; height:70px; margin:0 auto;}
+#intMenu li{float:left; width:28.5%; height:70px; box-sizing:border-box; line-height:66px; text-align:center; font-size:1.3rem; border:2px solid #7c6354; margin:0 10px;}
+#intMenu li:hover{background:#c5a48a; color:#fff; border:2px dashed #fff; font-weight: 700;}
+.choco{background:#7c6354; color:#fff;}
+.maca{background:#fbd8dd;}
+.JMenuSection article{width:70%; height:600px; margin:50px auto 0; border:3px dashed #eaceae;}
+.JMenuSection h1{width:20%; height:43px;  margin:0 auto; text-align:center; font-size:1.5rem; margin-top:50px; position:relative; }
+.JMenuSection h1 span{display:inline-block; position:absolute;left:0; bottom:0; width:100%; height:8px; background:#cfe1e9;}
+
+/* 일반케이크 */
+.JLine1, .JLine2{margin-top: 35px; height:165px; text-align:center;}
+.JLine1 img, .JLine2 img{width:100%; height:100%;}
+.JMenuSection article div span{display:inline-block; width:27%; height:100%; margin:0 10px;}
+
+/* 메뉴 슬라이드 스타일*/
+#slideBox{width:100%; height:500px; overflow: hidden; margin:0 auto; position:relative; }
+#menuSlide{width:200%;}
+.menuSlideDiv{float:left; width:50%; height:500px;}
+#arrow{width:97%; padding:10px; position:absolute; top:33%; color: #c5a48a; font-size: 4.5rem;}
+
+#arrow #next{float: right}
+#arrow #prev{float:left}
+#arrow #prev, #arrow #next:hover{cursor: pointer}
+    /* 슬라이드 배너 */
+#bannerNav{ position:relative; bottom: 10%; left:46%; width:100px; height:20px}
+#bannerNav ul{width:120px; height: 20px; text-align: center; list-style: n }
+#bannerNav ul li {width:20px; height: 20px; float: left; text-align: center; margin-right: 10px;}
+#bannerNav ul li a{background: url("../images/banner.png") no-repeat 0 -20px; display:block; height: 20px;}
+#bannerNav ul li a.current{background: url("../images/banner.png") no-repeat 0 0;}
+
